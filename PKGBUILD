@@ -8,7 +8,7 @@ arch=()
 url=""
 license=('GPL')
 groups=()
-depends= (
+depends=(
 	'dkms'
 )
 makedepends=(
