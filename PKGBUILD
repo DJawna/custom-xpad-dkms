@@ -10,6 +10,7 @@ license=('GPL')
 groups=()
 depends=(
 	'dkms'
+	'linux-headers'
 )
 makedepends=(
 	'git'
@@ -27,10 +28,12 @@ install=
 changelog=
 source=("git+https://github.com/DJawna/xpad.git#commit=21b5c6d")
 noextract=()
-sha256sums=()
+sha256sums=('SKIP')
 validpgpkeys=()
 
 package() {
-	cd "$pkgname-$pkgver"
+	#mkdir /usr/src/xpad-0.4
+	cp  -r ./xpad/* /usr/src/xpad-0.4/
+	#cd "$pkgname-$pkgver"
 	dkms install -m xpad -v 0.4
 }
