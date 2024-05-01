@@ -38,4 +38,7 @@ package() {
 
 	echo "* copying module into /usr/src..."
 	cp -r "${srcdir}/xpad/"* "${pkgdir}/usr/src/${_pkgname}-${pkgver}/"
+	
+	echo "install blacklist '${srcdir}/modprobe.conf' -> '${pkgdir}/usr/src/lib/modprobe.d/${_pkgname}.conf'"
+	install -D -m 644 "${srcdir}/modprobe.conf" "${pkgdir}/usr/lib/modprobe.d/${_pkgname}.conf"
 }
