@@ -1,6 +1,6 @@
-# Maintainer: djawna@gmail.com
-_pkgname=xpad
-pkgname=custom-xpad-dkms
+#aintainer: djawna@gmail.com
+_pkgname=xpad-dja
+pkgname=xpad-dja-dkms
 pkgver=0.4
 pkgrel=1
 epoch=
@@ -19,7 +19,7 @@ makedepends=(
 checkdepends=()
 optdepends=()
 provides=(
-	'custom-xpad'
+	'xpad-dja-dkms'
 )
 conflicts=()
 replaces=()
@@ -33,7 +33,9 @@ sha256sums=('SKIP')
 validpgpkeys=()
 
 package() {
+	echo "* installing /usr/src"
+	install -dm644 "${pkgdir}/usr/src/${_pkgname}-${pkgver}"
+
 	echo "* copying module into /usr/src..."
-	install -dm755 "${pkgdir}/usr/src/${_pkgname}-${pkgver}"
-	cp  -r "${srcdir}/$ ./xpad/* /usr/src/${_pkgname}-${pkgver}"
+	cp -r "${srcdir}/xpad/"* "${pkgdir}/usr/src/${_pkgname}-${pkgver}/"
 }
