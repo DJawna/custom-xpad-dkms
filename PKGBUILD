@@ -1,5 +1,6 @@
 # Maintainer: djawna@gmail.com
-pkgname=custom-xpad
+_pkgname=xpad
+pkgname=custom-xpad-dkms
 pkgver=0.4
 pkgrel=1
 epoch=
@@ -26,14 +27,13 @@ backup=()
 options=()
 install=
 changelog=
-source=("git+https://github.com/DJawna/xpad.git#commit=21b5c6d")
+source=("git+https://github.com/DJawna/xpad.git#commit=67beebb")
 noextract=()
 sha256sums=('SKIP')
 validpgpkeys=()
 
 package() {
-	#mkdir /usr/src/xpad-0.4
-	cp  -r ./xpad/* /usr/src/xpad-0.4/
-	#cd "$pkgname-$pkgver"
-	dkms install -m xpad -v 0.4
+	echo "* copying module into /usr/src..."
+	install -dm755 "${pkgdir}/usr/src/${_pkgname}-${pkgver}"
+	cp  -r "${srcdir}/$ ./xpad/* /usr/src/${_pkgname}-${pkgver}"
 }
