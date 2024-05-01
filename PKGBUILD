@@ -8,11 +8,17 @@ arch=()
 url=""
 license=('GPL')
 groups=()
-depends=()
-makedepends=()
+depends= (
+	'dkms'
+)
+makedepends=(
+	'git'
+)
 checkdepends=()
 optdepends=()
-provides=()
+provides=(
+	'custom-xpad'
+)
 conflicts=()
 replaces=()
 backup=()
@@ -26,5 +32,5 @@ validpgpkeys=()
 
 package() {
 	cd "$pkgname-$pkgver"
-	sudo dkms install -m xpad -v 0.4
+	dkms install -m xpad -v 0.4
 }
