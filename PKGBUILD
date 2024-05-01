@@ -27,7 +27,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("git+https://github.com/DJawna/xpad.git#commit=67beebb")
+source=("git+https://github.com/DJawna/xpad.git#commit=b11f4fe")
 noextract=()
 sha256sums=('SKIP')
 validpgpkeys=()
@@ -39,6 +39,6 @@ package() {
 	echo "* copying module into /usr/src..."
 	cp -r "${srcdir}/xpad/"* "${pkgdir}/usr/src/${_pkgname}-${pkgver}/"
 	
-	echo "install blacklist '${srcdir}/modprobe.conf' -> '${pkgdir}/usr/src/lib/modprobe.d/${_pkgname}.conf'"
-	install -D -m 644 "${srcdir}/modprobe.conf" "${pkgdir}/usr/lib/modprobe.d/${_pkgname}.conf"
+	echo "install blacklist '${srcdir}/xpad/modprobe.conf' -> '${pkgdir}/usr/src/lib/modprobe.d/${_pkgname}.conf'"
+	install -D -m 644 "${srcdir}/xpad/modprobe.conf" "${pkgdir}/usr/lib/modprobe.d/${_pkgname}.conf"
 }
