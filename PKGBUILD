@@ -15,6 +15,7 @@ depends=(
 )
 makedepends=(
 	'git'
+	'fakeroot'
 )
 checkdepends=()
 optdepends=()
