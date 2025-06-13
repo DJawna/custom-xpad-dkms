@@ -1,7 +1,7 @@
 #aintainer: djawna@gmail.com
 _pkgname=xpad-dja
 pkgname=xpad-dja-dkms
-pkgver=0.4
+pkgver=0.4.1
 pkgrel=1
 epoch=
 pkgdesc="This is a custom modofication of the xpad kernel module"
@@ -28,7 +28,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("git+https://github.com/DJawna/xpad.git#commit=b11f4fe")
+source=("git+https://github.com/DJawna/xpad.git#commit=e37c285")
 noextract=()
 sha256sums=('SKIP')
 validpgpkeys=()
