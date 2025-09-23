@@ -1,0 +1,4 @@
+pkg/
+src/
+xpad/
+xpad-dja-dkms*.pkg.tar.zst
