@@ -2,7 +2,7 @@
 _pkgname=xpad-dja
 pkgname=xpad-dja-dkms
 pkgver=0.4
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="This is a custom modofication of the xpad kernel module"
 arch=('x86_64')
