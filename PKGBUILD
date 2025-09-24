@@ -29,7 +29,7 @@ options=()
 install=
 changelog=
 source=(
-	'git+https://github.com/DJawna/xpad.git#commit=1303c60'
+	'git+https://github.com/DJawna/xpad.git#commit=e83036d'
 	'modprobe.conf'
 )
 noextract=()
